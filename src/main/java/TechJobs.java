@@ -126,7 +126,7 @@ public class TechJobs {
 
             //iterate over an ArrayList of jobs (each being a hashmap)
             for (HashMap<String, String> job : someJobs) {
-                System.out.println(("*****")); //formatting
+                System.out.println(("\n*****")); //formatting
 
                 //nest loops to iterate through keys of each hashmap over all hashmaps
                 for (Map.Entry<String, String> entry : job.entrySet()) {
@@ -134,7 +134,7 @@ public class TechJobs {
                     //print message:
                     System.out.println(entry.getKey() + ": " + entry.getValue());
                 }
-                System.out.println(("*****\n")); //formatting
+                System.out.println(("*****")); //formatting
             }
 
     }
