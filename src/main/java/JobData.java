@@ -71,7 +71,7 @@ public class JobData {
 
             String aValue = row.get(column);
 
-            if (aValue.equalsIgnoreCase(value)) {
+            if (aValue.toLowerCase().contains(value.toLowerCase())) {
                 jobs.add(row);
             }
         }
@@ -95,7 +95,7 @@ public class JobData {
         for (HashMap<String, String> job : allJobs) { //iterate all jobs
 
             for (Map.Entry<String, String> entry : job.entrySet()) { //iterate all key/value pairs
-                if (entry.getValue().equalsIgnoreCase(value)) { //if value contains search (case sensitive?)
+                if (entry.getValue().toLowerCase().contains(value.toLowerCase())) { //if value contains search (case sensitive?)
                     if (!jobs.contains(job)) { //if new array doesn't already contain the job
                         jobs.add(job); //add the job
                     }
